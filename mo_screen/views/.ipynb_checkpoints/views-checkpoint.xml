@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+      <record id="view_mrp_product_produce_inherit" model="ir.ui.view">
+            <field name="name">mrp.product.produce.inherit</field>
+            <field name="model">mrp.product.produce</field>
+            <field name="priority" eval="40"/>
+            <field name="inherit_id" ref="mrp.view_mrp_product_produce_wizard"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='raw_workorder_line_ids']" position="inside">  
+                    <field name="size_of_pieces"/>
+                    
+                    
+                </xpath>
+          </field>
+      </record>
+  </data>
+</odoo>
