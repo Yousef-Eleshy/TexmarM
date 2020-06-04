@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class mo_screen(models.Model):
+class mo_screen(models.TransientModel):
     
     _inherit = 'mrp.product.produce'
         
