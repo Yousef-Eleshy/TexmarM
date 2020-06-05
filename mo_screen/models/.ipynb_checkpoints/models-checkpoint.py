@@ -6,5 +6,6 @@ from odoo import models, fields, api
 class mo_screen(models.TransientModel):
     
     _inherit = 'mrp.product.produce'
-        
+    
+    # Field Define
     size_of_pieces = fields.Char(string='Size of Pieces', readonly=False)
