@@ -7,4 +7,12 @@ class mo_screen(models.TransientModel):
     
     _inherit = 'mrp.product.produce'
     
-    size_of_pieces = fields.Char(string='Size of Pieces', readonly=False)
+    size_of_pieces = fields.Char(string='Size of Pieces', store=True, readonly=False)
+    
+
+    
+class inv_screen(models.TransientModel):
+    
+    _inherit = 'mrp.product.produce'
+    
+    size_of_pieces_inv = fields.Char(string='Size of Pieces', store=True, readonly=False)
