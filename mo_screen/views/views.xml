@@ -6,7 +6,7 @@
             <field name="priority" eval="40"/>
             <field name="inherit_id" ref="mrp.view_mrp_product_produce_wizard"/>
             <field name="arch" type="xml">
-                <xpath expr="//form/group/field[@name='raw_workorder_line_ids']/tree/field[@name='lot_id']" position="after">  
+                <xpath expr="//group/group/field[@name='product_id']" position="after">  
                     <field name="size_of_pieces"/>
                 </xpath>
             </field>
