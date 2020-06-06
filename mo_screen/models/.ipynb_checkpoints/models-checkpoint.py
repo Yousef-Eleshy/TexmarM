@@ -12,7 +12,6 @@ class mo_screen(models.Model):
 
     
 class inv_screen(models.Model):
-    
     _name = 'inv.screen'
     _inherit = 'stock.picking'
     
