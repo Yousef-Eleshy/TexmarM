@@ -15,7 +15,7 @@ class StockMoveExt(models.Model):
 
     def _assign_picking(self):
         """
-        Size of Pieces field from MO is linked with Transfer Size of Pieces field
+        Linking Size of Pieces field from Manufacturing Order with Size of Pieces field from Transfer 
         :return:
         """
         Picking = self.env['stock.picking']
@@ -39,6 +39,7 @@ class StockMoveExt(models.Model):
             else:
                 new_picking = True
                 picking = Picking.create(moves._get_new_picking_values())
+                # Passing the value from Size of Pieces in Manufacturing Order to Size of Pieces field in Transfer
                 picking.size_of_pieces_inv = self.env['mrp.production'].search([('name', '=', self.origin)],limit=1).size_of_pieces
             moves.write({'picking_id': picking.id})
             moves._assign_picking_post_process(new=new_picking)
