@@ -10,7 +10,7 @@ class MrpProductProduceInherit(models.TransientModel):
     _inherit = 'mrp.product.produce'
     
     #Field to display the quantity difference between Size of Pieces and Quantity
-    quantity_difference = fields.Char("Quantity Difference", readonly=True)
+    quantity_difference = fields.Char("Quantity Difference")
     
     def _record_production(self):
         # Check all the product_produce line have a move id (the user can add product

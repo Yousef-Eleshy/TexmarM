@@ -15,7 +15,7 @@
             </xpath>
             
             <xpath expr="//form/group/group/field[@name='product_id']" position="after">
-                <field name="quantity_difference"/>
+                <field name="quantity_difference" decoration-danger="qty_producing&lt;10" decoration-success="qty_producing==10" decoration-info="qty_producing&gt;10"/>
             </xpath>
 
         </field>
