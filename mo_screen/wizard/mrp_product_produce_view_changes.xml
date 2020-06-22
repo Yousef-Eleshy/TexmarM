@@ -13,6 +13,10 @@
             <xpath expr="//field[@name='finished_workorder_line_ids']//tree" position="inside">
                 <field name="size_of_pieces" optional="show"/>
             </xpath>
+            
+            <xpath expr="//form/group/group/field[@name='product_id']" position="after">
+                <field name="quantity_difference"/>
+            </xpath>
 
         </field>
     </record>

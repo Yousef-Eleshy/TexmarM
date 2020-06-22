@@ -9,6 +9,9 @@ from odoo.tools import float_compare
 class MrpProductProduceInherit(models.TransientModel):
     _inherit = 'mrp.product.produce'
     
+    #Field to display the quantity difference between Size of Pieces and Quantity
+    quantity_difference = fields.Char("Quantity Difference", readonly=True)
+    
     def _record_production(self):
         # Check all the product_produce line have a move id (the user can add product
         # to consume directly in the wizard)
