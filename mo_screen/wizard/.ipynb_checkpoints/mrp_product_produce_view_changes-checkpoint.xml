@@ -15,19 +15,19 @@
 
                     <label for="size_of_pieces"/>
                         <div class="o_row" style="display:flex">
-                            <field name="one"/>
-                            <field name="two"/>
-                            <field name="three"/>
-                            <field name="four"/>
-                            <field name="five"/>
-                            <field name="six"/>
-                            <field name="seven"/>
-                            <field name="eight"/>
-                            <field name="nine"/>
-                            <field name="ten"/>
-                            <field name="eleven"/>
-                            <field name="twelve"/>
-                            <field name="thirteen"/>
+                            <field name="piece1"/>
+                            <field name="piece2"/>
+                            <field name="piece3"/>
+                            <field name="piece4"/>
+                            <field name="piece5"/>
+                            <field name="piece6"/>
+                            <field name="piece7"/>
+                            <field name="piece8"/>
+                            <field name="piece9"/>
+                            <field name="piece10"/>
+                            <field name="piece11"/>
+                            <field name="piece12"/>
+                            <field name="piece13"/>
                         </div>
             </xpath>
         </field>

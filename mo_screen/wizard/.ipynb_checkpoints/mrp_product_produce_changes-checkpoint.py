@@ -14,19 +14,19 @@ class MrpProductProduceInherit(models.TransientModel):
     
     size_of_pieces = fields.Char("Size of Pieces")
     
-    one = fields.Char()
-    two = fields.Char()
-    three = fields.Char()
-    four = fields.Char()
-    five = fields.Char()
-    six = fields.Char()
-    seven = fields.Char()
-    eight = fields.Char()
-    nine = fields.Char()
-    ten = fields.Char()
-    eleven = fields.Char()
-    twelve = fields.Char()
-    thirteen = fields.Char()
+    piece1 = fields.Integer()
+    piece2 = fields.Integer()
+    piece3 = fields.Integer()
+    piece4 = fields.Integer()
+    piece5 = fields.Integer()
+    piece6 = fields.Integer()
+    piece7 = fields.Integer()
+    piece8 = fields.Integer()
+    piece9 = fields.Integer()
+    piece10 = fields.Integer()
+    piece11 = fields.Integer()
+    piece12 = fields.Integer()
+    piece13 = fields.Integer()
 
     
     def _record_production(self):
