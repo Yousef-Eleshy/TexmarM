@@ -3,10 +3,13 @@ from odoo import models, fields, api
 from itertools import groupby
 
 
-#class MrpProduction(models.Model):
-#    _inherit = 'mrp.production'
+class MrpProduction(models.Model):
+    _inherit = 'mrp.production'
 
-#    size_of_pieces = fields.Char(string='Size of Pieces', )
+    size_of_pieces = fields.Char(string='Size of Pieces')
+    
+    quantity_difference = fields.Char("Quantity Difference")
+
 
 #    def button_mark_done(self):
 #        self.ensure_one()

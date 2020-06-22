@@ -27,6 +27,7 @@ class MrpProductProduceInherit(models.TransientModel):
     piece11 = fields.Integer()
     piece12 = fields.Integer()
     piece13 = fields.Integer()
+    
 
     
     def _record_production(self):

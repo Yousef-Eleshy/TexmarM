@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/stock_view_changes.xml',
+        'views/manufacturing_order_screen.xml',
         
         'wizard/mrp_product_produce_view_changes.xml',
     ],
