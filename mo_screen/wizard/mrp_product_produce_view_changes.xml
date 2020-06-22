@@ -5,19 +5,32 @@
         <field name="model">mrp.product.produce</field>
         <field name="inherit_id" ref="mrp.view_mrp_product_produce_wizard"/>
         <field name="arch" type="xml">
-
-            <xpath expr="//field[@name='raw_workorder_line_ids']//tree" position="inside">
-                <field name="size_of_pieces" optional="show"/>
-            </xpath>
-            
-            <xpath expr="//field[@name='finished_workorder_line_ids']//tree" position="inside">
-                <field name="size_of_pieces" optional="show"/>
-            </xpath>
             
             <xpath expr="//form/group/group/field[@name='product_id']" position="after">
-                <field name="quantity_difference" decoration-danger="qty_producing&lt;10" decoration-success="qty_producing==10" decoration-info="qty_producing&gt;10"/>
+                <field name="size_of_pieces"/>
+                <field name="quantity_difference" decoration-danger="qty_producing&lt;size_of_pieces" decoration-success="qty_producing==size_of_pieces" decoration-info="qty_producing&gt;size_of_pieces"/>
             </xpath>
+            <xpath expr="//form/group/group/field[@name='product_id']" position="after">
+                
+                <field name="size_of_pieces" invisible="1"/>
 
+                    <label for="size_of_pieces"/>
+                        <div class="o_row" style="display:flex">
+                            <field name="one"/>
+                            <field name="two"/>
+                            <field name="three"/>
+                            <field name="four"/>
+                            <field name="five"/>
+                            <field name="six"/>
+                            <field name="seven"/>
+                            <field name="eight"/>
+                            <field name="nine"/>
+                            <field name="ten"/>
+                            <field name="eleven"/>
+                            <field name="twelve"/>
+                            <field name="thirteen"/>
+                        </div>
+            </xpath>
         </field>
     </record>
 </odoo>
