@@ -19,15 +19,14 @@
     'version': '13',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'mrp', 'sale_management', 'stock', 'stock_picking_batch', 'sale_stock'],
+    'depends': ['base', 'mrp', 'sale_management', 'stock_picking_batch', 'sale_stock'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/stock_view_changes.xml',
-        'views/manufacturing_order_screen.xml',
+        'views/stock_picking_inherit_view.xml',
+        'views/mrp_product_produce_inherit_view.xml',
         
-        'wizard/mrp_product_produce_view_changes.xml',
+        'wizard/mrp_product_produce_inherit_view.xml',
     ],
 
 }

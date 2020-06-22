@@ -1,1 +1,1 @@
-from . import mrp_product_produce_changes
+from . import mrp_product_produce_inherit
