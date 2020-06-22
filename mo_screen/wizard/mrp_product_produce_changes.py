@@ -102,9 +102,3 @@ class MrpProductProduceInherit(models.TransientModel):
                             move_line.size_of_pieces = line.size_of_pieces
         return super(MrpProductProduceInherit, self).do_produce()
     
-
-class MrpProductProduceLineInherit(models.TransientModel):
-    _inherit = 'mrp.product.produce.line'
-
-    size_of_pieces = fields.Char("Size of Pieces")
-    
