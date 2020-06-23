@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//form/sheet/group/group/field[@name='bom_id']" position="after">
                     <field name="size_of_pieces" invisible="1"/>
+                    <field name="qty_producing" invisible="1"/>
                     <label for="size_of_pieces"/>
                     <div class="o_row" style="display:flex">
                         <field name="piece1"/>
@@ -24,7 +25,9 @@
                         <field name="piece12"/>
                         <field name="piece13"/>
                     </div>
-                    <field name="quantity_difference"/>
+                    <field name="quantity_difference" decoration-danger="size_of_pieces&lt;qty_producing"
+                       decoration-success="qty_producing==size_of_pieces"
+                       decoration-info="size_of_pieces&gt;qty_producing"/>
                 </xpath>
             </field>
         </record>

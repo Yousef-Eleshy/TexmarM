@@ -42,6 +42,7 @@ class MrpProductProduceInherit(models.TransientModel):
             'piece12': self.piece12,
             'piece13': self.piece13,
             'size_of_pieces': self.size_of_pieces,
+            'qty_producing': self.qty_producing,
             'quantity_difference': self.quantity_difference, })
         sale_order_object = self.env['sale.order'].search([('name', '=', mrp_production.origin)], limit=1)
         if sale_order_object:

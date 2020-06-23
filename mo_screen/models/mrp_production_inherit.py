@@ -7,6 +7,7 @@ class MrpProduction(models.Model):
     _inherit = 'mrp.production'
 
     size_of_pieces = fields.Float(string='Size of Pieces', readonly=1)
+    qty_producing = fields.Float(string='Currently Produced Quantity', digits='Product Unit of Measure')
     quantity_difference = fields.Float("Quantity Difference", readonly=1)
     piece1 = fields.Integer(readonly=1)
     piece2 = fields.Integer(readonly=1)
