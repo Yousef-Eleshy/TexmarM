@@ -48,11 +48,12 @@ class MrpProductProduceInherit(models.TransientModel):
         if sale_order_object:
             for picking_object in sale_order_object.picking_ids:
                 for move in picking_object.move_ids_without_package:
-                    move.write({
-                        'size_of_pieces': "%s %s %s %s %s %s %s %s %s %s %s %s %s" % (
-                            self.piece1, self.piece2, self.piece3, self.piece4, self.piece5, self.piece6, self.piece7,
-                            self.piece8, self.piece9, self.piece10, self.piece11, self.piece12, self.piece13)
-                    })
+                    if move.product_id.id == mrp_production.product_id.id:
+                        move.write({
+                            'size_of_pieces': "%s %s %s %s %s %s %s %s %s %s %s %s %s" % (
+                                self.piece1, self.piece2, self.piece3, self.piece4, self.piece5, self.piece6, self.piece7,
+                                self.piece8, self.piece9, self.piece10, self.piece11, self.piece12, self.piece13)
+                        })
 
         return super(MrpProductProduceInherit, self).do_produce()
 
