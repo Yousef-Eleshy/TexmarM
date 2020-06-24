@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Size of Pieces",
+    'name': "Size of Pieces (8)",
 
     'summary': """
-        Adds the Size of Pieces field in the Produce & Transfer Screens""",
+        Adds the Size of Pieces fields in the Produce & Transfer Screens""",
 
     'description': """
-        Adds the Size of Pieces field in the Produce & Transfer Screens
+        Adds the Size of Pieces fields in the Manufacturing Produce, Manufacturing Order & Sales Order/Purchase Order Transfer Screens
     """,
 
     'author': "Egymentors",
