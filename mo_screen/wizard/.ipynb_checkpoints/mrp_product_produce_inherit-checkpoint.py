@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
 from odoo import fields, models, api, _
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError ,ValidationError
+
 from odoo.tools import float_compare
 
 
@@ -47,6 +48,33 @@ class MrpProductProduceInherit(models.TransientModel):
         sale_order_object = self.env['sale.order'].search([('name', '=', mrp_production.origin)], limit=1)
         if sale_order_object:
             for picking_object in sale_order_object.picking_ids:
+                for move in picking_object.move_ids_without_package:
+                    if move.product_id.id == mrp_production.product_id.id:
+                        move.write({
+                            'size_of_pieces': "%s %s %s %s %s %s %s %s %s %s %s %s %s" % (
+                                self.piece1, self.piece2, self.piece3, self.piece4, self.piece5, self.piece6, self.piece7,
+                                self.piece8, self.piece9, self.piece10, self.piece11, self.piece12, self.piece13)
+                        })
+                        
+        purchase_order_object = self.sudo().env['purchase.order'].search([('partner_ref', '=', mrp_production.origin)], limit=1)
+        #raise ValidationError(_("Value %s")% purchase_order_object)
+
+        if purchase_order_object:
+            for picking_object in purchase_order_object.picking_ids:
+                for move in picking_object.move_ids_without_package:
+                    if move.product_id.id == mrp_production.product_id.id:
+                        move.write({
+                            'size_of_pieces': "%s %s %s %s %s %s %s %s %s %s %s %s %s" % (
+                                self.piece1, self.piece2, self.piece3, self.piece4, self.piece5, self.piece6, self.piece7,
+                                self.piece8, self.piece9, self.piece10, self.piece11, self.piece12, self.piece13)
+                        })
+                        
+        initial_purchase_order_object = self.sudo().env['purchase.order'].search([('partner_ref', '=', mrp_production.origin)], limit=1)
+        initial_sale_order_object = self.sudo().env['sale.order'].search([('name', '=', initial_purchase_order_object.origin)], limit=1)
+        #raise ValidationError(_("Value %s")% initial_sale_order_object)
+
+        if initial_sale_order_object:
+            for picking_object in initial_sale_order_object.picking_ids:
                 for move in picking_object.move_ids_without_package:
                     if move.product_id.id == mrp_production.product_id.id:
                         move.write({
