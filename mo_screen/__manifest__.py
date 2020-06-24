@@ -19,7 +19,7 @@
     'version': '13',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mrp', 'sale_management', 'stock_picking_batch', 'sale_stock'],
+    'depends': ['base', 'mrp', 'sale_management', 'stock_picking_batch', 'sale_stock', 'purchase', 'purchase_stock'],
 
     # always loaded
     'data': [
